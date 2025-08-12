@@ -1,0 +1,59 @@
+{
+  "name": "mcp-unsplash-image-downloader",
+  "version": "1.1.2",
+  "description": "MCP (Model Context Protocol) server for intelligent image search and download via AI assistants. Integrates with Unsplash API for high-quality free images.",
+  "main": "image-server.js",
+  "bin": {
+    "mcp-image-server": "image-server.js"
+  },
+  "files": [
+    "image-server.js",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "start": "node image-server.js",
+    "dev": "node image-server.js",
+    "test": "node temp_tests/test-server.js",
+    "prepublishOnly": "npm test",
+    "version": "npm run changelog && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags",
+    "changelog": "echo 'Changelog updated' > CHANGELOG.md"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "image-download",
+    "unsplash",
+    "ai-tools",
+    "development-tools",
+    "claude-desktop",
+    "ai-assistant",
+    "image-search",
+    "automation"
+  ],
+  "author": {
+    "name": "SunFei123456",
+    "email": "2770894499@qq.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunFei123456/mcp-image-downloader.git"
+  },
+  "homepage": "https://github.com/SunFei123456/mcp-image-downloader#readme",
+  "bugs": {
+    "url": "https://github.com/SunFei123456/mcp-image-downloader/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0"
+  },
+  "devDependencies": {}
+}
